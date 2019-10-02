@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84BB63E523451051009C946F /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB63E423451051009C946F /* Account.swift */; };
+		84BB63E7234516CA009C946F /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB63E6234516CA009C946F /* AccountViewController.swift */; };
 		84EB8399234500AE0007C53F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB8398234500AE0007C53F /* AppDelegate.swift */; };
 		84EB839B234500AE0007C53F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB839A234500AE0007C53F /* SceneDelegate.swift */; };
 		84EB839D234500AE0007C53F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB839C234500AE0007C53F /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84BB63E423451051009C946F /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		84BB63E6234516CA009C946F /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		84EB8395234500AE0007C53F /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EB8398234500AE0007C53F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84EB839A234500AE0007C53F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84BB63E123450F49009C946F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84BB63E423451051009C946F /* Account.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		84EB838C234500AE0007C53F = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +68,49 @@
 		84EB8397234500AE0007C53F /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
-				84EB8398234500AE0007C53F /* AppDelegate.swift */,
-				84EB839A234500AE0007C53F /* SceneDelegate.swift */,
-				84EB839C234500AE0007C53F /* ViewController.swift */,
-				84EB839E234500AE0007C53F /* Main.storyboard */,
-				84EB83A1234500B00007C53F /* Assets.xcassets */,
-				84EB83A3234500B00007C53F /* LaunchScreen.storyboard */,
-				84EB83A6234500B00007C53F /* Info.plist */,
+				84BB63E123450F49009C946F /* Models */,
+				84EB83AE234501530007C53F /* ViewControllers */,
+				84EB83AC234501220007C53F /* Storyboards */,
+				84EB83AF2345016C0007C53F /* Supports */,
+				84EB83AD2345013B0007C53F /* Resources */,
 			);
 			path = LoginApp;
+			sourceTree = "<group>";
+		};
+		84EB83AC234501220007C53F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				84EB83A3234500B00007C53F /* LaunchScreen.storyboard */,
+				84EB839E234500AE0007C53F /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		84EB83AD2345013B0007C53F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84EB83A1234500B00007C53F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		84EB83AE234501530007C53F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				84EB839C234500AE0007C53F /* ViewController.swift */,
+				84BB63E6234516CA009C946F /* AccountViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		84EB83AF2345016C0007C53F /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				84EB83A6234500B00007C53F /* Info.plist */,
+				84EB839A234500AE0007C53F /* SceneDelegate.swift */,
+				84EB8398234500AE0007C53F /* AppDelegate.swift */,
+			);
+			path = Supports;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +185,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84EB839D234500AE0007C53F /* ViewController.swift in Sources */,
+				84BB63E7234516CA009C946F /* AccountViewController.swift in Sources */,
+				84BB63E523451051009C946F /* Account.swift in Sources */,
 				84EB8399234500AE0007C53F /* AppDelegate.swift in Sources */,
 				84EB839B234500AE0007C53F /* SceneDelegate.swift in Sources */,
 			);
@@ -285,7 +333,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = LoginApp/Supports/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = LoginApp/Supports/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

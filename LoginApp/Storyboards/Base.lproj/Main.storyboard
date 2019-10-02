@@ -101,8 +101,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvz-iV-GGq">
+                                <rect key="frame" x="119.5" y="172.5" width="81.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkP-Bd-LLb">
-                                <rect key="frame" x="140.5" y="269" width="39" height="30"/>
+                                <rect key="frame" x="140.5" y="357" width="39" height="30"/>
                                 <state key="normal" title="Close">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -110,16 +116,10 @@
                                     <action selector="closeButton" destination="yzr-yU-0Eo" eventType="touchUpInside" id="ycU-Q2-L3Q"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvz-iV-GGq">
-                                <rect key="frame" x="119.5" y="172.5" width="81.5" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="mkP-Bd-LLb" firstAttribute="centerY" secondItem="JcZ-Es-hAT" secondAttribute="centerY" id="73V-19-rX1"/>
+                            <constraint firstItem="mkP-Bd-LLb" firstAttribute="centerY" secondItem="JcZ-Es-hAT" secondAttribute="centerY" constant="88" id="73V-19-rX1"/>
                             <constraint firstItem="Lvz-iV-GGq" firstAttribute="centerY" secondItem="JcZ-Es-hAT" secondAttribute="centerY" constant="-99.5" id="7y7-4T-79P"/>
                             <constraint firstItem="mkP-Bd-LLb" firstAttribute="centerX" secondItem="JcZ-Es-hAT" secondAttribute="centerX" id="c0S-Ib-6Sk"/>
                             <constraint firstItem="Lvz-iV-GGq" firstAttribute="centerX" secondItem="JcZ-Es-hAT" secondAttribute="centerX" id="yd5-39-TBE"/>

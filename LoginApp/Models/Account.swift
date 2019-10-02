@@ -15,7 +15,7 @@ class Account {
     }
     
     var getPassword: String {
-        return username
+        return password
     }
     
     init(username: String, password: String) {

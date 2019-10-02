@@ -24,7 +24,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="M1X-ic-Av1"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e87-Ur-6s4">
                                         <rect key="frame" x="0.0" y="47" width="160" height="34"/>
@@ -32,7 +32,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="Ama-dF-kjF"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -43,14 +43,41 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="LoginIsPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="QDM-Wh-EFT"/>
+                                    <action selector="loginPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="QDM-Wh-EFT"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="MnM-4K-ThV">
+                                <rect key="frame" x="12" y="282" width="296" height="28"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjw-gN-ZIo">
+                                        <rect key="frame" x="0.0" y="0.0" width="112" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="Forgot Username?">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="forgotUsernamePressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="d1l-Oi-Cy5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqA-U8-hIb">
+                                        <rect key="frame" x="187" y="0.0" width="109" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="Forgot Password?">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="forgotPasswordPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="sPG-QU-izo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Kfp-Za-Vrj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9j5-LI-j5n"/>
                             <constraint firstItem="wyl-jN-z0Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MVg-7H-WHr"/>
+                            <constraint firstItem="MnM-4K-ThV" firstAttribute="top" secondItem="wyl-jN-z0Y" secondAttribute="bottom" constant="16" id="OmN-6u-lkt"/>
+                            <constraint firstItem="MnM-4K-ThV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xhc-Gk-PqW"/>
                             <constraint firstItem="Kfp-Za-Vrj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-108.5" id="alU-QB-J3s"/>
                             <constraint firstItem="wyl-jN-z0Y" firstAttribute="top" secondItem="Kfp-Za-Vrj" secondAttribute="bottom" constant="16" id="dui-7M-Je0"/>
                         </constraints>
@@ -76,19 +103,32 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkP-Bd-LLb">
                                 <rect key="frame" x="140.5" y="269" width="39" height="30"/>
-                                <state key="normal" title="Close"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <action selector="closeButton" destination="yzr-yU-0Eo" eventType="touchUpInside" id="ycU-Q2-L3Q"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvz-iV-GGq">
+                                <rect key="frame" x="119.5" y="172.5" width="81.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="mkP-Bd-LLb" firstAttribute="centerY" secondItem="JcZ-Es-hAT" secondAttribute="centerY" id="73V-19-rX1"/>
+                            <constraint firstItem="Lvz-iV-GGq" firstAttribute="centerY" secondItem="JcZ-Es-hAT" secondAttribute="centerY" constant="-99.5" id="7y7-4T-79P"/>
                             <constraint firstItem="mkP-Bd-LLb" firstAttribute="centerX" secondItem="JcZ-Es-hAT" secondAttribute="centerX" id="c0S-Ib-6Sk"/>
+                            <constraint firstItem="Lvz-iV-GGq" firstAttribute="centerX" secondItem="JcZ-Es-hAT" secondAttribute="centerX" id="yd5-39-TBE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mtH-nX-yoZ"/>
                     </view>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="Lvz-iV-GGq" id="kr9-ST-8dZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p9O-kS-ika" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
